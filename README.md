@@ -2,7 +2,7 @@
 #### Install this library to start app
 <h style="color:red; font-family: t; font-size: 20px">After installing the packages, run the main.py file</h>
 ### Library:
-<h style="color:green; padding:80px; font-family: t; font-size: 20px">Customtkinter : version => 5.1.0</h>
+<h style="color:green; padding:80px; font-family: t; font-size: 20px">Customtkinter : version => 5.1.0</h><br>
 <h style="color:green; padding:80px; font-family: t; font-size: 20px">pillow</h>
 ## This program includes two parts: registration and login
 ### -------------- Images of the registration section --------------
