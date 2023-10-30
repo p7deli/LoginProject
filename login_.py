@@ -87,8 +87,9 @@ class Form_(Tk):
         self.f_pass_log_in = tk.CTkFrame(self.form_log_in, width=360, height=2, fg_color="black", bg_color="white")
         self.f_pass_log_in.place(x=20, y=300)
 
-        self.show_hide_pass_log_in = tk.CTkCheckBox(self.form_log_in, text="Show Password",
-                                                    border_width=2, border_color="black", command=self.show_pass)
+        self.show_hide_pass_log_in = tk.CTkCheckBox(self.form_log_in, text="Show Pass",
+                                                    border_width=2, border_color="black", font=("Arial", 15),
+                                                    command=self.show_pass)
         self.show_hide_pass_log_in.place(x=150, y=320)
 
         self.btn_sign = tk.CTkButton(self.form_log_in, text="Sign In", width=385, height=50,
@@ -152,8 +153,9 @@ class Form_(Tk):
         self.f_pass_sign_up = tk.CTkFrame(self.form_sign_up, width=360, height=2, fg_color="black", bg_color="white")
         self.f_pass_sign_up.place(x=20, y=380)
 
-        self.show_hide_pass_sign_up = tk.CTkCheckBox(self.form_sign_up, text="Show Password",
-                                                     border_width=2, border_color="black", command=self.show_pass)
+        self.show_hide_pass_sign_up = tk.CTkCheckBox(self.form_sign_up, text="Show Pass",
+                                                     border_width=2, border_color="black", font=("Arial", 15),
+                                                     command=self.show_pass)
         self.show_hide_pass_sign_up.place(x=150, y=405)
 
         self.btn_sign_up = tk.CTkButton(self.form_sign_up, text="Sign Un", width=385, height=50,
@@ -189,13 +191,17 @@ class Form_(Tk):
     def show_pass(self):
         if self.show_hide_pass_sign_up.get():
             self.txt_pass_sign_up.configure(show="")
+            self.show_hide_pass_sign_up.configure(text="Hide Pass")
         else:
             self.txt_pass_sign_up.configure(show="*")
+            self.show_hide_pass_sign_up.configure(text="Show Pass")
 
         if self.show_hide_pass_log_in.get():
             self.txt_pass_log_in.configure(show="")
+            self.show_hide_pass_log_in.configure(text="Hide Pass")
         else:
             self.txt_pass_log_in.configure(show="*")
+            self.show_hide_pass_log_in.configure(text="Show Pass")
 
     def exit(self):
         ques = messagebox.askyesno("Exit", "DO You Want TO Exit?")
